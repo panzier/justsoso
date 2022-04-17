@@ -21,7 +21,7 @@ udata=$(sed -n '33p' temp1.txt)
 udata=${udata#*fun18\"}
 udata=${udata#*value=\"}
 fun18="${udata%%\"*}" 
-
+sleep 2
 curl -d "did=1&men6=a" -d "fun18=$fun18&ptopid=$ptopid&sid=$sid" -s $url2 -o /dev/null #进入确认界面
 sleep 2
 curl -d "@myvs.txt" -d "fun18=$fun18&ptopid=$ptopid&sid=$sid" -s $url2 -o temp.txt #打卡
