@@ -35,4 +35,3 @@ jobs:
           to: ${{secrets.RECEIVE_MAIL}}
           from: 郑州大学数据中台
           convert_markdown: true
-          content_type: txt/html 
