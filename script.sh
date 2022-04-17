@@ -19,7 +19,7 @@ sleep 2
 curl -d "ptopid=$ptopid&sid=$sid&fun2=" -s $url2 -o temp1.txt #获取fun18
 udata=$(sed -n '33p' temp1.txt)
 udata=${udata#*fun18\"}
-udata=$(udata#value=\")
+udata=$(udata#*value=\")
 fun18="${udata%%\"*}" 
 
 curl -d "did=1&men6=a" -d "fun18=$fun18&ptopid=$ptopid&sid=$sid" -s $url2 -o /dev/null #进入确认界面
